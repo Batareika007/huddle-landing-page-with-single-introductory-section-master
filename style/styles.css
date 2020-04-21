@@ -14,16 +14,7 @@
 - Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
 - Weights: 400
 
-
-
-
-
-
 */
-
-
-
-
 
 html {
 
@@ -71,26 +62,31 @@ main {
 
 article {
     display: grid;
-    grid-auto-flow: column;
+    /* grid-template-columns: minmax(100px 1fr); */
+    /* grid-auto-flow: column; */
 }
 
 .main_image {
     grid-area: 1 / 1 / 2 / 2;
+   
 }
-
-
-h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 45px;
-    margin-bottom: 34px;
-}
+/* 
+img{
+    width: 100%;
+    height: 100%;
+} */
 
 .main_text {
     grid-area: 1 / 2 / 2 / 3;
     font-family: 'Open Sans', sans-serif;
     padding-left: 50px;
+}
 
-
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    /* font-size: 3em; */
+    margin-bottom: 34px;
 }
 
 p {
@@ -110,13 +106,14 @@ button {
     padding: 0;
     margin: 0;
     border-style: none;
+    background-color: #fff;
     -webkit-box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
 }
 
 .bottom_links {
-    grid-area: 2 / 1 / 4 / 4;
+    grid-area: 2 / 1 / 3 / 3;
     justify-self: end;
 
 }
@@ -153,9 +150,14 @@ a {
     text-decoration: none;
 }
 
+span{
+    /* visibility: hidden; */
+    display: none;
+}
+
 /* for mobile */
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
 
     header {
         height: 124px;
@@ -168,7 +170,7 @@ a {
 
     main {
         max-width: 375px;
-        height: 788px;
+        height: 100%;
         background-image: url(../images/bg-mobile.svg);
         background-repeat: no-repeat;
         padding-left: 40px;
@@ -193,7 +195,7 @@ a {
 
     }
 
-    h1 {
+    h2 {
         font-size: 22px;
         justify-self: center;
         text-align: center;
